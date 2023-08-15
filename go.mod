@@ -1,4 +1,4 @@
-module github.com/Hazeman99/og-portfolio
+module github.com/Hazeman99/og-generator
 
 go 1.18
 

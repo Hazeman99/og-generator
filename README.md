@@ -1,4 +1,4 @@
-# OG Portfolio Image Generator CLI Tool
+# OG Image Generator CLI Tool
 
 ## Description
 
@@ -26,8 +26,20 @@ Or you can build the executable and run it:
 
 ```bash
 go build .
-./og-image-generator --title="<TITLE HERE>" --description="<DESCRIPTION HERE>" --minutes=7 --author="<AUTHOR NAME HERE>" --website="<WEBSITE URL HERE>"
+./og-generator --title="<TITLE HERE>" --description="<DESCRIPTION HERE>" --minutes=7 --author="<AUTHOR NAME HERE>" --website="<WEBSITE URL HERE>"
 ```
+
+## Example
+
+Run
+
+```bash
+./og-generator --title="Differences Between SaaS, PaaS, and IaaS" --description="In this article, I will be going through the three big services used to deploy software applications and their required components. I will also briefly explain the differences between them and which method you should use to deploy your own software application." --minutes=7 --author="Hazem Hadi" --website="https://hazemhadi.com"
+```
+
+Output:
+
+![Output Image](output.png "Output Image")
 
 ## Credits
 

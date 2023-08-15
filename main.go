@@ -36,6 +36,7 @@ func main() {
 	author := flag.String("author", "", "author of the article")
 	minutes := flag.Int("minutes", 0, "minutes to read the article")
 	website := flag.String("website", "", "website of the article")
+	output := flag.String("output", "output.png", "output file name")
 
 	flag.Parse()
 
@@ -71,7 +72,7 @@ func main() {
 		}
 	}
 
-	err = dc.SavePNG("./output.png")
+	err = dc.SavePNG(*output)
 	if err != nil {
 		panic(err)
 	}
@@ -123,8 +124,9 @@ func addDescription(dc *gg.Context, description string, titleLength int) {
 	y := textTopMargin + 80
 	maxWidth := float64(dc.Width()) - textRightMargin - textRightMargin
 
-	if len(description) > 197 {
-		description = description[:197] + "..."
+	// if description is too long, cut it off - keep 2 lines only
+	if len(description) > 130 {
+		description = description[:130] + "..."
 	}
 
 	dc.DrawStringWrapped(description, x, y, 0, 0, maxWidth, 1.8, gg.AlignLeft)

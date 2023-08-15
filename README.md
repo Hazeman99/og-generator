@@ -19,14 +19,14 @@ Make sure that you have the **Background Image** (file named background.png) and
 Run the following command:
 
 ```bash
-go run . --title="<TITLE HERE>" --description="<DESCRIPTION HERE>" --minutes=7 --author="<AUTHOR NAME HERE>" --website="<WEBSITE URL HERE>"
+go run . --title="<TITLE HERE>" --description="<DESCRIPTION HERE>" --minutes=7 --author="<AUTHOR NAME HERE>" --website="<WEBSITE URL HERE>" --output="<OUTPUT FILE NAME/PATH HERE>"
 ```
 
 Or you can build the executable and run it:
 
 ```bash
 go build .
-./og-generator --title="<TITLE HERE>" --description="<DESCRIPTION HERE>" --minutes=7 --author="<AUTHOR NAME HERE>" --website="<WEBSITE URL HERE>"
+./og-generator --title="<TITLE HERE>" --description="<DESCRIPTION HERE>" --minutes=7 --author="<AUTHOR NAME HERE>" --website="<WEBSITE URL HERE>" --output="<OUTPUT FILE NAME/PATH HERE>"
 ```
 
 ## Example
